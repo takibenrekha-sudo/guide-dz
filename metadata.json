@@ -1,0 +1,11 @@
+{
+  "name": "Guide des Médicaments Algérie 2025",
+  "description": "Référence complète des médicaments en Algérie. Trouvez les génériques et dosages. Livraison 58 Wilayas, Paiement à la main.",
+  "requestFramePermissions": [],
+  "openGraph": {
+    "title": "Guide des Médicaments Algérie 2025 🇩🇿",
+    "description": "L'outil indispensable pour les professionnels et étudiants de santé en Algérie. Commandez maintenant !",
+    "image": "./couverture.jpg",
+    "type": "website"
+  }
+}

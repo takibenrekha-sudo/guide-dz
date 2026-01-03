@@ -1,0 +1,164 @@
+export const WILAYAS = [
+  "01 - Adrar",
+  "02 - Chlef",
+  "03 - Laghouat",
+  "04 - Oum El Bouaghi",
+  "05 - Batna",
+  "06 - Béjaïa",
+  "07 - Biskra",
+  "08 - Béchar",
+  "09 - Blida",
+  "10 - Bouira",
+  "11 - Tamanrasset",
+  "12 - Tébessa",
+  "13 - Tlemcen",
+  "14 - Tiaret",
+  "15 - Tizi Ouzou",
+  "16 - Alger",
+  "17 - Djelfa",
+  "18 - Jijel",
+  "19 - Sétif",
+  "20 - Saïda",
+  "21 - Skikda",
+  "22 - Sidi Bel Abbès",
+  "23 - Annaba",
+  "24 - Guelma",
+  "25 - Constantine",
+  "26 - Médéa",
+  "27 - Mostaganem",
+  "28 - M'Sila",
+  "29 - Mascara",
+  "30 - Ouargla",
+  "31 - Oran",
+  "32 - El Bayadh",
+  "33 - Illizi",
+  "34 - Bordj Bou Arreridj",
+  "35 - Boumerdès",
+  "36 - El Tarf",
+  "37 - Tindouf",
+  "38 - Tissemsilt",
+  "39 - El Oued",
+  "40 - Khenchela",
+  "41 - Souk Ahras",
+  "42 - Tipaza",
+  "43 - Mila",
+  "44 - Aïn Defla",
+  "45 - Naâma",
+  "46 - Aïn Témouchent",
+  "47 - Ghardaïa",
+  "48 - Relizane",
+  "49 - El M'Ghair",
+  "50 - El Meniaa",
+  "51 - Ouled Djellal",
+  "52 - Bordj Badji Mokhtar",
+  "53 - Béni Abbès",
+  "54 - Timimoun",
+  "55 - Touggourt",
+  "56 - Djanet",
+  "57 - In Salah",
+  "58 - In Guezzam",
+];
+
+// PRIX DU LIVRE
+export const BOOK_PRICE = 4500;
+
+/**
+ * TARIFS DE LIVRAISON (PARKERS)
+ * Vous pouvez modifier ces chiffres selon votre PDF.
+ */
+export const SHIPPING_RATES: Record<
+  string,
+  { domicile: number; bureau: number }
+> = {
+  "01 - Adrar": { domicile: 1100, bureau: 850 },
+  "02 - Chlef": { domicile: 700, bureau: 400 },
+  "03 - Laghouat": { domicile: 800, bureau: 450 },
+  "04 - Oum El Bouaghi": { domicile: 700, bureau: 450 },
+  "05 - Batna": { domicile: 700, bureau: 400 },
+  "06 - Béjaïa": { domicile: 700, bureau: 400 },
+  "07 - Biskra": { domicile: 700, bureau: 450 },
+  "08 - Béchar": { domicile: 1000, bureau: 750 },
+  "09 - Blida": { domicile: 500, bureau: 300 },
+  "10 - Bouira": { domicile: 700, bureau: 400 },
+  "11 - Tamanrasset": { domicile: 1100, bureau: 900 },
+  "12 - Tébessa": { domicile: 800, bureau: 450 },
+  "13 - Tlemcen": { domicile: 700, bureau: 450 },
+  "14 - Tiaret": { domicile: 700, bureau: 400 },
+  "15 - Tizi Ouzou": { domicile: 700, bureau: 400 },
+  "16 - Alger": { domicile: 400, bureau: 250 },
+  "17 - Djelfa": { domicile: 750, bureau: 450 },
+  "18 - Jijel": { domicile: 700, bureau: 400 },
+  "19 - Sétif": { domicile: 700, bureau: 400 },
+  "20 - Saïda": { domicile: 700, bureau: 550 },
+  "21 - Skikda": { domicile: 700, bureau: 450 },
+  "22 - Sidi Bel Abbès": { domicile: 700, bureau: 400 },
+  "23 - Annaba": { domicile: 700, bureau: 450 },
+  "24 - Guelma": { domicile: 700, bureau: 500 },
+  "25 - Constantine": { domicile: 700, bureau: 400 },
+  "26 - Médéa": { domicile: 600, bureau: 300 },
+  "27 - Mostaganem": { domicile: 700, bureau: 400 },
+  "28 - M'Sila": { domicile: 700, bureau: 500 },
+  "29 - Mascara": { domicile: 700, bureau: 450 },
+  "30 - Ouargla": { domicile: 800, bureau: 500 },
+  "31 - Oran": { domicile: 700, bureau: 400 },
+  "32 - El Bayadh": { domicile: 900, bureau: 500 },
+  "33 - Illizi": { domicile: 1200, bureau: 1100 },
+  "34 - Bordj Bou Arreridj": { domicile: 700, bureau: 500 },
+  "35 - Boumerdès": { domicile: 600, bureau: 300 },
+  "36 - El Tarf": { domicile: 700, bureau: 450 },
+  "37 - Tindouf": { domicile: 1300, bureau: 850 },
+  "38 - Tissemsilt": { domicile: 700, bureau: 400 },
+  "39 - El Oued": { domicile: 700, bureau: 550 },
+  "40 - Khenchela": { domicile: 700, bureau: 450 },
+  "41 - Souk Ahras": { domicile: 700, bureau: 400 },
+  "42 - Tipaza": { domicile: 600, bureau: 400 },
+  "43 - Mila": { domicile: 700, bureau: 400 },
+  "44 - Aïn Defla": { domicile: 700, bureau: 400 },
+  "45 - Naâma": { domicile: 900, bureau: 650 },
+  "46 - Aïn Témouchent": { domicile: 700, bureau: 450 },
+  "47 - Ghardaïa": { domicile: 800, bureau: 450 },
+  "48 - Relizane": { domicile: 700, bureau: 400 },
+  "49 - El M'Ghair": { domicile: 800, bureau: 0 },
+  "50 - El Meniaa": { domicile: 1000, bureau: 700 },
+  "51 - Ouled Djellal": { domicile: 800, bureau: 600 },
+  "52 - Bordj Badji Mokhtar": { domicile: 0, bureau: 0 },
+  "53 - Béni Abbès": { domicile: 1200, bureau: 0 },
+  "54 - Timimoun": { domicile: 1000, bureau: 750 },
+  "55 - Touggourt": { domicile: 800, bureau: 550 },
+  "56 - Djanet": { domicile: 0, bureau: 0 },
+  "57 - In Salah": { domicile: 1000, bureau: 1000 },
+  "58 - In Guezzam": { domicile: 0, bureau: 0 },
+};
+
+// Fonction utilitaire pour obtenir le tarif
+export const getShippingPrice = (wilaya: string, type: string): number => {
+  if (!wilaya) return 0;
+
+  let rates = SHIPPING_RATES[wilaya];
+
+  if (!rates) {
+    const code = parseInt(wilaya.substring(0, 2));
+    if (
+      [1, 8, 11, 33, 37, 47, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58].includes(
+        code
+      )
+    ) {
+      rates = SHIPPING_RATES["GRAND_SUD"];
+    } else if ([3, 7, 17, 28, 30, 32, 39, 45].includes(code)) {
+      rates = SHIPPING_RATES["SUD"];
+    } else {
+      rates = SHIPPING_RATES["DEFAULT_NORTH"];
+    }
+  }
+
+  return type === "Bureau" ? rates.bureau : rates.domicile;
+};
+
+export const IMAGES = {
+  couverture: "./couverture.jpg",
+  page1: "./page1.jpg",
+  page2: "./page2.jpg",
+  page3: "./page3.jpg",
+  livreOuvert: "./livre-ouvert.jpg",
+  contexte: "./contexte.jpg",
+};
