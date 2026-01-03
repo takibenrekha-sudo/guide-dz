@@ -32,3 +32,4 @@ Pour recevoir les commandes directement par email, suivez exactement ces 3 étap
 - **Sujet de l'email** : Automatiquement formaté pour inclure le nom du client et la wilaya.
 - **Validation** : Le formulaire vérifie que les champs obligatoires sont remplis avant l'envoi.
 - **Confirmation** : Un message de succès s'affiche au client après l'envoi réussi.
+# guide-dz
