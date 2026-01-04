@@ -135,10 +135,10 @@ export const getShippingPrice = (wilaya: string, type: string): number => {
 // IMPORTANT : Assurez-vous que vos fichiers sont dans le même dossier que constants.ts
 // et qu'ils sont nommés exactement comme ci-dessous.
 export const IMAGES = {
-  couverture: "./couverture.jpg",
-  page1: "./page1.jpg",
-  page2: "./page2.jpg",
-  page3: "./page3.jpg",
-  livreOuvert: "./livre-ouvert.jpg",
-  contexte: "./contexte.jpg",
+  couverture: "/couverture.jpg",
+  page1: "/page1.jpg",
+  page2: "/page2.jpg",
+  page3: "/page3.jpg",
+  livreOuvert: "/livre-ouvert.jpg",
+  contexte: "/livre.jpg", // ou /contexte.jpg selon le nom
 };
