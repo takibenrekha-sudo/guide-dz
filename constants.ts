@@ -1,22 +1,70 @@
-
 export const WILAYAS = [
-  "01 - Adrar", "02 - Chlef", "03 - Laghouat", "04 - Oum El Bouaghi", "05 - Batna",
-  "06 - Béjaïa", "07 - Biskra", "08 - Béchar", "09 - Blida", "10 - Bouira",
-  "11 - Tamanrasset", "12 - Tébessa", "13 - Tlemcen", "14 - Tiaret", "15 - Tizi Ouzou",
-  "16 - Alger", "17 - Djelfa", "18 - Jijel", "19 - Sétif", "20 - Saïda",
-  "21 - Skikda", "22 - Sidi Bel Abbès", "23 - Annaba", "24 - Guelma", "25 - Constantine",
-  "26 - Médéa", "27 - Mostaganem", "28 - M'Sila", "29 - Mascara", "30 - Ouargla",
-  "31 - Oran", "32 - El Bayadh", "33 - Illizi", "34 - Bordj Bou Arreridj", "35 - Boumerdès",
-  "36 - El Tarf", "37 - Tindouf", "38 - Tissemsilt", "39 - El Oued", "40 - Khenchela",
-  "41 - Souk Ahras", "42 - Tipaza", "43 - Mila", "44 - Aïn Defla", "45 - Naâma",
-  "46 - Aïn Témouchent", "47 - Ghardaïa", "48 - Relizane", "49 - El M'Ghair", "50 - El Meniaa",
-  "51 - Ouled Djellal", "52 - Bordj Badji Mokhtar", "53 - Béni Abbès", "54 - Timimoun", 
-  "55 - Touggourt", "56 - Djanet", "57 - In Salah", "58 - In Guezzam"
+  "01 - Adrar",
+  "02 - Chlef",
+  "03 - Laghouat",
+  "04 - Oum El Bouaghi",
+  "05 - Batna",
+  "06 - Béjaïa",
+  "07 - Biskra",
+  "08 - Béchar",
+  "09 - Blida",
+  "10 - Bouira",
+  "11 - Tamanrasset",
+  "12 - Tébessa",
+  "13 - Tlemcen",
+  "14 - Tiaret",
+  "15 - Tizi Ouzou",
+  "16 - Alger",
+  "17 - Djelfa",
+  "18 - Jijel",
+  "19 - Sétif",
+  "20 - Saïda",
+  "21 - Skikda",
+  "22 - Sidi Bel Abbès",
+  "23 - Annaba",
+  "24 - Guelma",
+  "25 - Constantine",
+  "26 - Médéa",
+  "27 - Mostaganem",
+  "28 - M'Sila",
+  "29 - Mascara",
+  "30 - Ouargla",
+  "31 - Oran",
+  "32 - El Bayadh",
+  "33 - Illizi",
+  "34 - Bordj Bou Arreridj",
+  "35 - Boumerdès",
+  "36 - El Tarf",
+  "37 - Tindouf",
+  "38 - Tissemsilt",
+  "39 - El Oued",
+  "40 - Khenchela",
+  "41 - Souk Ahras",
+  "42 - Tipaza",
+  "43 - Mila",
+  "44 - Aïn Defla",
+  "45 - Naâma",
+  "46 - Aïn Témouchent",
+  "47 - Ghardaïa",
+  "48 - Relizane",
+  "49 - El M'Ghair",
+  "50 - El Meniaa",
+  "51 - Ouled Djellal",
+  "52 - Bordj Badji Mokhtar",
+  "53 - Béni Abbès",
+  "54 - Timimoun",
+  "55 - Touggourt",
+  "56 - Djanet",
+  "57 - In Salah",
+  "58 - In Guezzam",
 ];
 
 export const BOOK_PRICE = 4500;
 
-export const SHIPPING_DATA: Record<string, { domicile: number, bureau: number }> = {
+export const SHIPPING_DATA: Record<
+  string,
+  { domicile: number; bureau: number }
+> = {
   "01 - Adrar": { domicile: 1100, bureau: 850 },
   "02 - Chlef": { domicile: 700, bureau: 400 },
   "03 - Laghouat": { domicile: 800, bureau: 450 },
@@ -75,21 +123,22 @@ export const SHIPPING_DATA: Record<string, { domicile: number, bureau: number }>
   "56 - Djanet": { domicile: 0, bureau: 0 },
   "57 - In Salah": { domicile: 1000, bureau: 1000 },
   "58 - In Guezzam": { domicile: 0, bureau: 0 },
-];
+};
 
 export const getShippingPrice = (wilaya: string, type: string): number => {
   if (!wilaya || !SHIPPING_DATA[wilaya]) return 0;
-  return type === 'Bureau' ? SHIPPING_DATA[wilaya].bureau : SHIPPING_DATA[wilaya].domicile;
+  const data = SHIPPING_DATA[wilaya];
+  return type === "Bureau" ? data.bureau : data.domicile;
 };
 
-// Utilisation de chemins relatifs directs pour les images.
-// Puisque les images sont situées à la racine du projet, ces chemins
-// sont résolus correctement par le navigateur et par l'étape de build de Vite.
+// Utilisation de chemins directs.
+// IMPORTANT : Assurez-vous que vos fichiers sont dans le même dossier que constants.ts
+// et qu'ils sont nommés exactement comme ci-dessous.
 export const IMAGES = {
-  couverture: './couverture.jpg', 
-  page1: './page1.jpg',
-  page2: './page2.jpg',
-  page3: './page3.jpg',
-  livreOuvert: './livre-ouvert.jpg',
-  contexte: './contexte.jpg'
+  couverture: "./couverture.jpg",
+  page1: "./page1.jpg",
+  page2: "./page2.jpg",
+  page3: "./page3.jpg",
+  livreOuvert: "./livre-ouvert.jpg",
+  contexte: "./contexte.jpg",
 };
