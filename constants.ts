@@ -59,14 +59,9 @@ export const WILAYAS = [
   "58 - In Guezzam",
 ];
 
-// PRIX DU LIVRE
 export const BOOK_PRICE = 4500;
 
-/**
- * TARIFS DE LIVRAISON (PARKERS)
- * Vous pouvez modifier ces chiffres selon votre PDF.
- */
-export const SHIPPING_RATES: Record<
+export const SHIPPING_DATA: Record<
   string,
   { domicile: number; bureau: number }
 > = {
@@ -130,28 +125,11 @@ export const SHIPPING_RATES: Record<
   "58 - In Guezzam": { domicile: 0, bureau: 0 },
 };
 
-// Fonction utilitaire pour obtenir le tarif
 export const getShippingPrice = (wilaya: string, type: string): number => {
-  if (!wilaya) return 0;
-
-  let rates = SHIPPING_RATES[wilaya];
-
-  if (!rates) {
-    const code = parseInt(wilaya.substring(0, 2));
-    if (
-      [1, 8, 11, 33, 37, 47, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58].includes(
-        code
-      )
-    ) {
-      rates = SHIPPING_RATES["GRAND_SUD"];
-    } else if ([3, 7, 17, 28, 30, 32, 39, 45].includes(code)) {
-      rates = SHIPPING_RATES["SUD"];
-    } else {
-      rates = SHIPPING_RATES["DEFAULT_NORTH"];
-    }
-  }
-
-  return type === "Bureau" ? rates.bureau : rates.domicile;
+  if (!wilaya || !SHIPPING_DATA[wilaya]) return 0;
+  return type === "Bureau"
+    ? SHIPPING_DATA[wilaya].bureau
+    : SHIPPING_DATA[wilaya].domicile;
 };
 
 export const IMAGES = {

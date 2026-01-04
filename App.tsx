@@ -18,6 +18,10 @@ import {
   Edit3,
   Send,
   Star,
+  Info,
+  Check,
+  Users,
+  AlertTriangle,
 } from "lucide-react";
 import { WILAYAS, IMAGES, BOOK_PRICE, getShippingPrice } from "./constants";
 
@@ -73,8 +77,9 @@ const Hero = () => (
           </h1>
 
           <p className="text-base md:text-lg text-slate-600 max-w-md leading-relaxed font-medium">
-            Tous les médicaments disponibles en Algérie avec leurs équivalents
-            génériques. Référence 2025 complète.
+            <p>Auteur : DR NADINE CHABANE</p>Référence 2025 complète pour les
+            professionnels et étudiants. Trouvez les génériques et dosages en un
+            clin d'œil.
           </p>
 
           <div className="flex flex-wrap gap-3 pt-2">
@@ -127,7 +132,7 @@ const Hero = () => (
 );
 
 const Features = () => (
-  <section className="py-8 bg-white print:hidden">
+  <section className="py-8 bg-white print:hidden border-b border-slate-50">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex items-start gap-4">
@@ -176,6 +181,151 @@ const Features = () => (
   </section>
 );
 
+const BookDescription = () => (
+  <section className="py-16 bg-white overflow-hidden print:hidden">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col md:flex-row gap-12 items-start">
+        <div className="md:w-3/5 space-y-10">
+          <header className="space-y-4">
+            <div className="inline-flex items-center gap-2 text-green-600 bg-green-50 px-3 py-1 rounded-lg text-xs font-black uppercase tracking-widest">
+              <Info size={14} />
+              Découvrir l'ouvrage
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black text-slate-900 leading-[1.15]">
+              <span className="relative z-10">
+                Une vision claire et structurée
+              </span>
+              <br />
+              <span className="relative inline-block mt-2">
+                <span className="absolute inset-0 bg-green-100 -rotate-1 transform scale-110"></span>
+                <span className="relative text-green-600">du médicament.</span>
+              </span>
+            </h2>
+          </header>
+
+          <div className="text-slate-600 space-y-8">
+            <p className="text-lg md:text-xl leading-relaxed font-medium">
+              Le Guide des Médicaments en Algérie est un{" "}
+              <b>ouvrage de référence</b> qui offre une vision claire,
+              structurée et actualisée du médicament, pensé pour répondre aux{" "}
+              <b>besoins réels</b> des étudiants et des professionnels de santé.
+            </p>
+
+            <div className="bg-slate-50 border-l-4 border-green-600 p-6 rounded-r-2xl italic">
+              Conçu sous forme de <b>tableaux synthétiques</b>, il permet une
+              consultation <b>rapide et efficace</b>, aussi bien dans le cadre
+              de la révision universitaire que de la pratique quotidienne.
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-black text-slate-900">
+                Une organisation experte et innovante
+              </h3>
+              <p className="text-base leading-relaxed">
+                Le guide adopte une <b>structure hybride unique</b>, alliant un
+                classement rigoureux par <b>classes thérapeutiques</b>, intégré
+                au sein de <b>26 chapitres</b> organisés par spécialités
+                médicales (dermatologie, ophtalmologie, toxicologie, douleur et
+                anesthésie, etc.).
+              </p>
+              <p className="text-sm font-medium opacity-80">
+                Cette double organisation facilite la compréhension
+                pharmacologique, le raisonnement clinique et l’application
+                pratique.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-black text-slate-900">
+                Un contenu clair, visuel et standardisé
+              </h3>
+              <p className="text-base leading-relaxed">
+                L’ensemble est structuré en <b>tableaux clairs et lisibles</b>,
+                garantissant un <b>gain de temps considérable</b>. Pour chaque
+                médicament, le guide présente de façon homogène : la <b>DCI</b>,
+                les noms de <b>spécialités</b>, les <b>formes</b>{" "}
+                pharmaceutiques, les <b>dosages</b> disponibles et le{" "}
+                <b>laboratoire</b> détenteur.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xl font-black text-slate-900">
+                Une vision locale et internationale
+              </h3>
+              <p className="text-base leading-relaxed">
+                Le guide inclut principalement les médicaments conformes à la{" "}
+                <b>nomenclature algérienne</b>, mais également des DCI non
+                encore commercialisées localement, afin d’offrir une vision
+                globale des <b>nouveautés thérapeutiques</b> et des tendances
+                internationales.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="md:w-2/5 w-full sticky top-24 space-y-6">
+          <div className="bg-slate-900 p-8 rounded-[2rem] text-white shadow-2xl">
+            <h3 className="text-xl font-black mb-6 flex items-center gap-2 text-green-400">
+              <Users size={24} />À qui s'adresse ce guide ?
+            </h3>
+            <ul className="space-y-5">
+              {[
+                "Étudiants en pharmacie et en médecine",
+                "Pharmaciens d'officine et hospitaliers",
+                "Médecins et praticiens de santé",
+                "Enseignants et formateurs",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <div className="mt-1 w-5 h-5 bg-green-500/20 rounded-full flex items-center justify-center shrink-0">
+                    <Check
+                      size={12}
+                      className="text-green-400"
+                      strokeWidth={4}
+                    />
+                  </div>
+                  <span className="text-sm font-bold opacity-90">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-xl">
+            <div className="flex items-center gap-2 mb-6">
+              <Star className="text-yellow-400" fill="currentColor" size={20} />
+              <h3 className="text-lg font-black text-slate-900">
+                Format Pratique
+              </h3>
+            </div>
+            <p className="text-sm text-slate-500 font-medium mb-4">
+              Optimisé pour une utilisation en milieu hospitalier ou en
+              officine.
+            </p>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="p-3 bg-slate-50 rounded-xl">
+                <p className="text-[10px] font-black text-slate-400 uppercase">
+                  Taille
+                </p>
+                <p className="text-sm font-black text-slate-800">
+                  A4 (meilleure visibilité)
+                </p>
+              </div>
+              <div className="p-3 bg-slate-50 rounded-xl">
+                <p className="text-[10px] font-black text-slate-400 uppercase">
+                  Pages
+                </p>
+                <p className="text-sm font-black text-slate-800">
+                  237 pages (recto-verso)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const Gallery = () => {
   const [current, setCurrent] = useState(0);
   const images = [
@@ -200,7 +350,8 @@ const Gallery = () => {
           Aperçu du contenu
         </h2>
         <p className="text-slate-500 text-sm max-w-lg mx-auto mb-8 font-medium">
-          Feuilletez quelques pages pour découvrir la qualité de l'organisation.
+          Feuilletez quelques pages pour découvrir la qualité de l'organisation
+          en tableaux.
         </p>
 
         <div className="relative max-w-lg mx-auto rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-lg">
@@ -265,10 +416,14 @@ const OrderForm = () => {
   );
   const shippingPrice = getShippingPrice(formData.wilaya, deliveryType);
   const totalItems = qty * BOOK_PRICE;
+
+  // Si la livraison est indisponible (prix = 0), on n'affiche pas de total erroné
+  const isAvailable = formData.wilaya ? shippingPrice > 0 : true;
   const totalPrice = totalItems + shippingPrice;
 
   const handleGenerateBon = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!isAvailable) return;
     setStep("REVIEW");
     window.scrollTo({
       top: document.getElementById("order")?.offsetTop! - 60,
@@ -430,32 +585,76 @@ const OrderForm = () => {
   return (
     <section id="order" className="py-12 bg-white scroll-mt-14 print:hidden">
       <div className="max-w-4xl mx-auto px-4">
-        <div className="bg-white rounded-[2rem] shadow-xl overflow-hidden flex flex-col md:flex-row border border-slate-100">
+        <div className="bg-white rounded-[2rem] shadow-2xl overflow-hidden flex flex-col md:flex-row border border-slate-100">
+          {/* Colonne de Gauche : Récapitulatif Visuel */}
           <div className="md:w-[35%] bg-green-600 p-8 text-white flex flex-col justify-between">
-            <div>
-              <h2 className="text-2xl font-black mb-4 uppercase tracking-tight">
-                Commande
-              </h2>
-              <div className="space-y-4">
-                <div className="bg-white/10 p-3 rounded-xl border border-white/10 flex gap-3 items-center">
-                  <Truck size={20} className="shrink-0" />
-                  <p className="text-[10px] font-bold opacity-90 leading-tight">
-                    Livraison 58 Wilayas avec <b>Parkers</b>.
-                  </p>
-                </div>
-                <div className="flex items-center gap-3 px-1">
-                  <ShieldCheck size={16} className="text-green-200" />{" "}
-                  <span className="text-xs font-bold">Paiement Cash</span>
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-2xl font-black uppercase tracking-tight mb-6">
+                  Récapitulatif
+                </h2>
+                <div className="space-y-4">
+                  <div className="bg-white/10 p-3 rounded-xl border border-white/10 flex gap-3 items-center">
+                    <Truck size={20} className="shrink-0 text-green-200" />
+                    <p className="text-[10px] font-bold opacity-90 leading-tight">
+                      Livraison 58 Wilayas via <b>Parkers</b>.
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3 px-1">
+                    <ShieldCheck size={16} className="text-green-200" />
+                    <span className="text-xs font-bold">
+                      Paiement à la livraison
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="mt-8 pt-4 border-t border-white/20">
-              <div className="flex justify-between items-center text-2xl font-black">
-                <span className="text-[10px] uppercase opacity-60 tracking-widest font-black">
-                  Total
-                </span>
-                <span>{totalPrice.toLocaleString()} DA</span>
+              <div className="space-y-4 pt-10">
+                <div className="flex justify-between items-center">
+                  <span className="text-[10px] font-black uppercase opacity-60 tracking-widest">
+                    Livre x{qty}
+                  </span>
+                  <span className="text-sm font-black tracking-tight">
+                    {totalItems.toLocaleString()} DA
+                  </span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-[10px] font-black uppercase opacity-60 tracking-widest">
+                    Livraison ({formData.wilaya.split(" - ")[0] || "--"})
+                  </span>
+                  <span
+                    className={`text-sm font-black tracking-tight ${
+                      formData.wilaya && shippingPrice === 0
+                        ? "text-red-200"
+                        : ""
+                    }`}
+                  >
+                    {!formData.wilaya
+                      ? "---"
+                      : shippingPrice === 0
+                      ? "Indisponible"
+                      : `${shippingPrice.toLocaleString()} DA`}
+                  </span>
+                </div>
+
+                <div className="relative pt-4">
+                  <div className="absolute inset-x-0 top-0 h-px bg-white/20"></div>
+                  <div className="flex justify-between items-end mt-4">
+                    <span className="text-[10px] font-black uppercase opacity-60 tracking-widest mb-1.5">
+                      Total
+                    </span>
+                    <span className="text-4xl font-black tracking-tighter leading-none">
+                      {formData.wilaya && shippingPrice > 0 ? (
+                        <>
+                          {totalPrice.toLocaleString()}{" "}
+                          <span className="text-lg">DA</span>
+                        </>
+                      ) : (
+                        "---"
+                      )}
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -507,7 +706,7 @@ const OrderForm = () => {
                     setFormData({ ...formData, wilaya: e.target.value })
                   }
                 >
-                  <option value="">Wilaya...</option>
+                  <option value="">Sélectionner...</option>
                   {WILAYAS.map((w) => (
                     <option key={w} value={w}>
                       {w}
@@ -519,7 +718,7 @@ const OrderForm = () => {
 
             <div className="space-y-2">
               <label className="text-[9px] font-black text-slate-400 uppercase tracking-wider ml-1">
-                Réception
+                Mode de Réception
               </label>
               <div className="grid grid-cols-2 gap-3">
                 <button
@@ -531,7 +730,7 @@ const OrderForm = () => {
                       : "bg-white border-slate-100 text-slate-400 hover:border-slate-200"
                   }`}
                 >
-                  Domicile
+                  À Domicile
                 </button>
                 <button
                   type="button"
@@ -542,19 +741,28 @@ const OrderForm = () => {
                       : "bg-white border-slate-100 text-slate-400 hover:border-slate-200"
                   }`}
                 >
-                  Bureau
+                  Stop Desk (Bureau)
                 </button>
               </div>
+              {formData.wilaya && shippingPrice === 0 && (
+                <div className="flex items-center gap-2 text-red-500 mt-1">
+                  <AlertTriangle size={14} />
+                  <span className="text-[10px] font-bold">
+                    Désolé, la livraison {deliveryType.toLowerCase()} est
+                    indisponible pour cette wilaya.
+                  </span>
+                </div>
+              )}
             </div>
 
             <div className="space-y-1">
               <label className="text-[9px] font-black text-slate-400 uppercase tracking-wider ml-1">
-                Adresse
+                Adresse Précise
               </label>
               <input
                 required
                 className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-transparent text-sm font-bold outline-none focus:border-green-500 focus:bg-white transition-all"
-                placeholder="Adresse précise..."
+                placeholder="Cité, Rue, Commune..."
                 value={formData.adresse}
                 onChange={(e) =>
                   setFormData({ ...formData, adresse: e.target.value })
@@ -564,13 +772,13 @@ const OrderForm = () => {
 
             <div className="flex items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-100">
               <span className="text-xs font-black text-slate-700">
-                Quantité
+                Quantité de livres
               </span>
               <div className="flex items-center gap-4">
                 <button
                   type="button"
                   onClick={() => setQty(Math.max(1, qty - 1))}
-                  className="w-8 h-8 rounded-lg bg-white shadow-sm border border-slate-100 text-lg font-bold"
+                  className="w-8 h-8 rounded-lg bg-white shadow-sm border border-slate-100 text-lg font-bold flex items-center justify-center"
                 >
                   -
                 </button>
@@ -578,7 +786,7 @@ const OrderForm = () => {
                 <button
                   type="button"
                   onClick={() => setQty(Math.min(20, qty + 1))}
-                  className="w-8 h-8 rounded-lg bg-white shadow-sm border border-slate-100 text-lg font-bold"
+                  className="w-8 h-8 rounded-lg bg-white shadow-sm border border-slate-100 text-lg font-bold flex items-center justify-center"
                 >
                   +
                 </button>
@@ -587,9 +795,18 @@ const OrderForm = () => {
 
             <button
               type="submit"
-              className="w-full py-4 bg-green-600 hover:bg-green-700 text-white rounded-xl font-black text-base shadow-lg shadow-green-100 transition-all flex items-center justify-center gap-2 active:scale-[0.98]"
+              disabled={!isAvailable || !formData.wilaya}
+              className={`w-full py-4 rounded-xl font-black text-base shadow-lg transition-all flex items-center justify-center gap-2 active:scale-[0.98] ${
+                !isAvailable || !formData.wilaya
+                  ? "bg-slate-200 text-slate-400 cursor-not-allowed"
+                  : "bg-green-600 hover:bg-green-700 text-white shadow-green-100"
+              }`}
             >
-              Générer le Bon
+              {!formData.wilaya
+                ? "Sélectionner une Wilaya"
+                : shippingPrice === 0
+                ? "Livraison Indisponible"
+                : "Générer le Bon"}
               <ArrowRight size={18} />
             </button>
           </form>
@@ -605,6 +822,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <Features />
+      <BookDescription />
       <Gallery />
       <OrderForm />
       <footer className="bg-slate-950 text-slate-500 py-6 px-4 border-t border-white/5 print:hidden">
